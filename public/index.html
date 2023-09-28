@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>SimpleWeb by Webstar</title>
+<html lang="en">
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <title>Webstar</title>
 </head>
-<body>
   <style>
     .header {
       height: 100%;
@@ -37,25 +40,9 @@
       color: white;
     }
   </style>
-
-  <div class="header">
-    <center>
-      <h1>simpleweb</h1>
-      <hr>
-      <div class="form-group">
-        <input id="url" type="text" class="form-control" placeholder="http://www.bbc.co.uk">
-      </div>
-                    onkeydown='if(event.key==="Enter") go()' />
-                <button onclick='go()' class="w3-xlarge">Go!</button>
-      <hr>
-      <div class="alert alert-info" role="alert" style="display: none">
-        This proxy does not support the https protocol, try http.
-      </div>
-    </center>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-  <script>
+<body>
+    <div>
+            <script>
                 function go() {
                     var input = document.getElementById('url-target');
                     if (input.value) {
@@ -64,6 +51,13 @@
                         alert('Please provide a link. It does not require https://.');
                     }
                 }
-  </script>
-</body>
-</html>
+            </script>
+            <span class="w3-xlarge">Input your URL here: </span>
+            <div>
+                <input class="w3-xlarge" type='text' placeholder='https://www.google.com' id='url-target'
+                    onkeydown='if(event.key==="Enter") go()' />
+                <button onclick='go()' class="w3-xlarge">Go!</button>
+            </div>
+            <br>
+            <br>
+            </p>
