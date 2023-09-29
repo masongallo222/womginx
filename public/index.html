@@ -1,43 +1,103 @@
+<!-- header/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="shortcut icon" type="image/png" href="logo.png" />
-    <title>SimpleWeb by Webstar</title>
+    <title>Webstar.live - The Official Home of Proxies</title>
+    <!-- Set the favicon to logo.png -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif; /* Set the font to Arial */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Background color */
+            background-image: url('background.svg'); /* Set background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+        }
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0 20px; /* Increase top padding to move the text higher */
+        }
+        h1 {
+            font-size: 36px; /* Increase font size to make the text taller */
+            margin: 0;
+        }
+        /* Add a link style for navigation links */
+        .nav-link {
+            font-size: 24px; /* Increase font size for navigation links */
+            font-family: Arial, sans-serif; /* Specify Arial font */
+            text-decoration: none;
+            color: #ff9900; /* Customize the color */
+            display: block; /* Display links as block elements */
+            margin: 10px 0; /* Add spacing between links */
+        }
+        /* Center content in the middle of the page */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Adjust the container height to 100% of the viewport */
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .w3-xlarge {
+            font-size: 18px;
+            margin: 5px;
+        }
+        .url-input {
+            padding: 10px; /* Increase padding for larger text input box */
+            font-size: 18px;
+            width: 300px; /* Increase width for larger text input box */
+        }
+        .go-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 18px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .go-button:hover {
+            background-color: #0059b3;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <!-- Only "SimpleWeb" in the header -->
+        <h1>SimpleWeb</h1>
+    </header>
     <div class="container">
-        <img src="webstar.png" width="250" height="250">
-        <div>
-            <script>
-                function go() {
-                    var input = document.getElementById('url-target');
-                    if (input.value) {
-                        window.location.href = '/main/' + input.value;
-                    } else {
-                        alert('Please provide a link. It does not require https://.');
-                    }
-                }
-            </script>
+        <div class="input-container">
             <span class="w3-xlarge">Input your URL here: </span>
-            <div>
-                <input class="w3-xlarge" type='text' placeholder='https://www.google.com' id='url-target'
-                    onkeydown='if(event.key==="Enter") go()' />
-                <button onclick='go()' class="w3-xlarge">Search</button>
-            </div>
-            <br>
-            <br>
-            </p>
+            <input class="url-input" type="text" placeholder="https://www.google.com" id="url-target">
+            <button class="go-button" onclick="go()">Go!</button>
         </div>
     </div>
+    <script>
+        function go() {
+            var input = document.getElementById('url-target');
+            if (input.value) {
+                window.location.href = '/main/' + input.value;
+            } else {
+                alert('Please provide a link. It does not require https://.');
+            }
+        }
+    </script>
 </body>
+</html>
+
 
 </html>
